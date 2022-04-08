@@ -1,0 +1,201 @@
+/*
+Theme Name: Hello thème enfant
+Description: Theme enfant de Firas
+Author: Firas
+Template: hello-elementor
+Version: 1.0.0
+*/
+
+body {
+    background: #505c6d;
+}
+
+/* Modification du header*/
+/*--------------------------------------------------*/
+#site-header{
+    max-width: 100%;
+    border-bottom: 2px solid #0a0909;
+}
+
+#site-branding{
+    background: #131921;
+}
+
+.site-branding img{
+    width: 8em;
+    height: 8em;
+    border-radius: 25px;
+}
+
+.site-introduction{
+    margin: 0 2em;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.site-title{
+    font-size: 4em;
+    font-weight: 600;
+    padding-left: 1em;
+}
+
+.site-title a{
+    color: white;
+}
+
+.site-description{
+    margin: 0 1em;
+    color: white;
+    font-size: 2em;
+}
+/*--------------------------------------------------*/
+/* Modification du menu principal
+/*--------------------------------------------------*/
+.site-navigation{
+    background: #232F3E;
+    justify-content: start;
+    flex-grow: 0;
+    width: 100%;
+    padding: 0 5em;
+}
+
+#menu-menu-principal .menu-item>a {
+    width: 100%;
+    color: white;
+    border: #232F3E 1px solid;
+    padding: 0.5em;
+
+}
+
+#menu-menu-principal .menu-item a:hover{
+    border: white 1px solid;
+    padding: 0.5em;
+}
+
+.site-navigation ul.menu li ul{
+    background: #232F3E;
+}
+/*--------------------------------------------------*/
+/* Modification du footer
+/*--------------------------------------------------*/
+#site-copyright{
+    text-align: center;
+    color: white;
+}
+
+#site-footer{
+    background: #131921;
+    padding: 0.5em 2em;
+    margin-bottom: 0.5em;
+    max-width: 100%;
+    border-top: 2px solid grey;
+
+}
+
+/*--------------------------------------------------*/
+/* Modification de la balise <main>
+/*--------------------------------------------------*/
+#content{
+    max-width: 80%;
+    min-height: 75vh;
+    border: #131415 3px solid;
+    border-radius: 20px;
+    margin: 0.5em auto;
+    padding: 0.5em 2em;
+    background-color: #a7b8ce;
+}
+
+.page-header, .page-content{
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    padding: 0.5em 2em;
+}
+
+.page-header{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.page-header img{
+    width: 20%;
+    margin-right: 1em;
+}
+
+.page-header div{
+    width: 90%;
+}
+.page-header div p a {
+    color: white;
+}
+.page-header div p a:hover {
+    text-decoration: underline;
+}
+.retour {
+    text-align: center;
+}
+.retour a {
+    color: white;
+}
+/*--------------------------------------------*/
+/* Modification d'une catégorie surl'accueil
+/*--------------------------------------------*/
+.accueil {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.categorie_produit {
+    width: 48%;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0,0,0,0.5);
+    flex-wrap: wrap;
+    margin-bottom: 1em;
+}
+.categorie_produit h2 {
+    text-align: center;
+    width: 100%;
+    color: white;
+}
+
+.categorie_produit_item {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.categorie_produit_item img {
+    width: 80%;
+    margin-top: 0,5em;
+}
+.categorie_produit_item h3, .categorie_produit_item p {
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+/*--------------------------------------------------*/
+/* Modification d'une archive
+/*--------------------------------------------------*/
+#archive_content {
+    display: flex;
+    flex-wrap: wrap;
+}
+.archive_item {
+    display: flex;
+    width: 48%;
+    align-items: start;
+    background-color: rgba(0,0,0,0.5);
+    margin: 0.2em 0.2em;
+}
+.archive_item img {
+    width: 20%;
+    margin: 1em 0.5em;
+}
+.archive_item div {
+    width: 75%;
+    padding: 0 0.5em;
+    color: white;
+}
