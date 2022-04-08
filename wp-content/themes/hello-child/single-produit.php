@@ -18,20 +18,20 @@ $prix_reduit = $prix_vente * (100-$reduction) / 100;
 $tva_id = get_field( 'taux_de_tva' );
 $tva = get_term_meta($tva_id);
 $taux_tva = $tva['taux'][0];
-$montant_tva = $prix_vente * $taux_tva / 100;
+$montant_tva = $prix_reduit * $taux_tva / 100;
 $image = get_the_post_thumbnail();
-$categories_id = get_field('categories_du_produit');
+$categories_id = get_field( 'categories_du_produit');
 
 $categories_array = [];
 foreach($categories_id as $id){
 	$categorie = get_term_by('id',$id,'categorie_produit');
 	$categorie_name = $categorie->name;
-	$url = get_term_link($id, 'categorie_produit');
+	$url = get_term_link($id,'categorie_produit');
 	$url2 = '<a href="'.$url.'">'.$categorie_name.'</a>';
 	array_push($categories_array,$url2);
 }
-var_dump($categories_array);
 $categories_str = implode(' - ',$categories_array);
+
 
 get_header();
 while ( have_posts() ) :
@@ -54,6 +54,7 @@ while ( have_posts() ) :
 			<?php if($reduction>0): ?>
 			<p>Bon de réduction : <?=$reduction?>%</p>
 			<p>Prix avec la promotion : <?=number_format($prix_reduit,2,',',' ')?> €</p>
+			<?php else : ?>
 			<p>Pas de promotion en cours</p>
 			<?php endif; ?>
 			<p>Montant TVA : <?=number_format($montant_tva,2,',',' ')?> € (<?=$taux_tva?>%)</p>
